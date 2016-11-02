@@ -1,0 +1,85 @@
+{%  extends 'racks/baselayer.html' %}
+{%  load staticfiles %}
+
+     {% block title %}
+    Racks On Racks: Favourite Racks{% endblock %}
+{% block body_block %}
+    <p id="home"><a href="/racks">Home</a> </p>
+    <body>
+
+        <meta property="fb:app_id"              content="1716597285226116"/>
+        <meta property="og:url"                content=http://racksonracks.pythonanywhere.com/racks/fave/?user=undefined />
+        <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="I Favourited a bike rack!" />
+        <!-- <meta property="place:location:latitude"  content="37.416382">
+        <meta property="place:location:longitude" content="-122.152659">
+        <meta property="place:location:altitude"  content="42"> hi
+        hihihi
+        -->
+
+        <div id="fb-root"></div>
+        <!-- what is this
+        <div id="MyEdit"> This text will change </div>
+-->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1716597285226116";
+     fjs.parentNode.insertBefore(js, fjs);
+        var location;
+        var lat = myLatLngGlobal.lat;
+        var lng = myLatLngGlobal.lon;
+        var latlng = new google.maps.LatLng(lat, lng);
+        var geocoder = geocoder = new google.maps.Geocoder();
+        geocoder.geocode({'latLng': latlng},
+
+                function (results, status) {
+                    if (status === google.maps.GeocoderStatus.OK) {
+                        if (results[1]) {
+                            location = results[1].formatted_address;
+                            document.getElementById("MyEdit").innerHTML = location;
+                        }
+                    }
+                });
+
+}   (document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+        <div class="fb-share-button" data-href="http://racksonracks.pythonanywhere.com/racks/fave/" data-layout="button"></div>
+
+
+    </head>
+
+
+    <body>
+
+
+
+        <h1 id="header">My Location  {% csrf_token %}</h1>
+
+
+
+
+
+        <h1 id="header">My Favourites  {% csrf_token %}</h1>
+
+
+
+        {% if racks %}
+            <ul id="para">
+<li id="para">user</li>
+                {% for rack in racks %}
+                <!-- Following line changed to add an HTML hyperlink -->
+                <li id="para">{{ rack.address }} with {{ rack.number }} racks</li>
+                {% endfor %}
+            </ul>
+       {% else %}
+            <strong id="para">There are no racks present.</strong>
+       {% endif %}
+
+    </body>
+{%  endblock %}

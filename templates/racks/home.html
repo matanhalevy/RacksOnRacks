@@ -1,0 +1,105 @@
+{%  extends 'racks/baselayer.html' %}
+{%  load staticfiles %}
+
+{% block title %}
+    Racks On Racks: Find Nearby Places to Secure Your Bike!
+{% endblock %}
+
+{% block script_block %}
+    <link rel="stylesheet" href="{% static "map/css/maps-admin.css" %}" />
+    <script type="text/javascript" src="{% static "fb-login/js/fblogin.js" %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="{% static "map/javascript/googlemaps.js" %}"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjEILUPsJO83wPyTKZlscBCMO-Aajy6Kw&signed_in=true&libraries=geometry, places&callback=initMap"></script>
+{%  endblock %}
+
+
+
+{% block body_block %}
+<p id="about"><a href="about/">About</a> </p>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <select id="filters">
+        <option value="100">100m</option>
+        <option value="250">250m</option>
+        <option value="500">500m</option>
+        <option value="1000">1000m</option>
+        <option value="10000">All</option>
+        <option value="16">Skytrain</option>
+        <option value="Fave">Favorites</option>
+    </select>
+
+    <script>
+        var test;
+        FB.api('/me', function(response) {
+            test = response.name;
+        });
+        console.log("testing" +test);
+    </script>
+
+    <button onclick="rerun()">Filter</button>
+    <button onclick="goToFavourites()">Favorites</button>
+
+
+    </br>
+
+    <br/>
+    <div id="map_canvas"></div>
+    <br/><br/><br/><br/><br/>
+     <div id = "fb" align="center">
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+
+        <div
+                class="fb-like"
+                data-share="true"
+                data-width="450"
+                data-show-faces="true">
+        </div>
+
+        <div id="status">
+        </div>
+    </div>
+
+    <div id="queryL">
+        <img id="pulloutL" src="{% static "images/pullout.png" %}" width="25" height="25"/>
+        <p><b> Favourite Racks</b></p>
+        <div id="containerL">
+                <br/><br/><br/><br/><br/><br/><br/>
+                <u1 id="contentL">
+
+                    <a href="/racks/fave/"><img src="{% static "images/favsicon.png" %}"
+                                                          width="50" height="50"/> <br/>
+                        Favorites
+                    </a>
+                </u1>
+        </div>
+    </div>
+
+    <div id="queryR">
+        <img id="pulloutR" src="{% static "images/pullout.png" %}" width="25" height="25"/>
+        <p><b> Used Racks</b></p>
+        <div id="containerR">
+
+            <ul id="contentR">
+                <a href="/racks/used/"><img src="{% static "images/recentlyusedicon.png" %}"
+                                                          width="50" height="50"/> <br/>
+                        Recently Used
+                    </a>
+            </ul>
+
+    </div>
+    </div>
+
+
+
+
+    </body>
+
+
+
+{% endblock %}

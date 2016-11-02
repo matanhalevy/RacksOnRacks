@@ -1,0 +1,284 @@
+@font-face {
+    font-family: Minecraft; src:url(fonts/Minecraft.ttf)
+}
+@font-face {
+    font-family: Titillium Web; src:url(fonts/TitilliumWeb-Regular.ttf)
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+#menu {
+    border-radius: 10px;
+    border: 5px solid;
+    border-color: dodgerblue;
+    width: 90%;
+    height: 112px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    font-family: Minecraft;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    float: left;
+}
+
+#logo:hover {
+    -webkit-animation-name: flip; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 40.5s; /* Chrome, Safari, Opera */
+    animation-name: flip;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes flip {
+    50%  {-ms-transform: rotate(180deg) scaleX(1.35) scaleY(1.35); /* IE 9 */
+        -webkit-transform: rotate(180deg) scaleX(1.35) scaleY(1.35); /* Chrome, Safari, Opera */
+        transform: rotate(180deg) scaleX(1.35) scaleY(1.35);
+        }
+    100% {-ms-transform: rotate(360deg) scaleX(1) scaleY(1); /* IE 9 */
+        -webkit-transform: rotate(360deg) scaleX(1) scaleY(1); /* Chrome, Safari, Opera */
+        transform: rotate(360deg) scaleX(1) scaleY(1);
+        }
+}
+
+@keyframes flip {
+    50%  {-ms-transform: rotate(180deg) scaleX(1.35) scaleY(1.35); /* IE 9 */
+        -webkit-transform: rotate(180deg) scaleX(1.35) scaleY(1.35); /* Chrome, Safari, Opera */
+        transform: rotate(180deg) scaleX(1.35) scaleY(1.35);
+        }
+    100% {-ms-transform: rotate(360deg) scaleX(1) scaleY(1); /* IE 9 */
+        -webkit-transform: rotate(360deg) scaleX(1) scaleY(1); /* Chrome, Safari, Opera */
+        transform: rotate(360deg) scaleX(1) scaleY(1);
+    }
+}
+    /*-webkit-animation-name: hop; !*Chrome, Safari, Opera *!
+    -webkit-animation-duration: 30.5s; !*Chrome, Safari, Opera *!
+    animation-name: tilt;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}*
+
+@-webkit-keyframes hop {
+    0% { -webkit-transform: scale(1); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(1); !* IE9 *!
+        transform: scale(1);}
+    25% { -webkit-transform: scale(0.5); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(0.5); !* IE9 *!
+        transform: scale(0.5);}
+    50% { -webkit-transform: scale(1.5); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(1.5); !* IE9 *!
+        transform: scale(1.5);}
+    75% { -webkit-transform: scale(0.75); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(0.75); !* IE9 *!
+        transform: scale(0.75);}
+    100% { -webkit-transform: scale(1); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(1); !* IE9 *!
+        transform: scale(1);}
+}
+
+@keyframes hop {
+    0% { -webkit-transform: scale(1); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(1); !* IE9 *!
+        transform: scale(1);}
+    25% { -webkit-transform: scale(0.5); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(0.5); !* IE9 *!
+        transform: scale(0.5);}
+    50% { -webkit-transform: scale(1.5); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(1.5); !* IE9 *!
+        transform: scale(1.5);}
+    75% { -webkit-transform: scale(0.75); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(0.75); !* IE9 *!
+        transform: scale(0.75);}
+    100% { -webkit-transform: scale(1); !*Chrome, Safari, Opera *!
+        -ms-transform: scale(1); !* IE9 *!
+        transform: scale(1);}
+}*/
+
+
+#title {
+    width: 65%;
+    height: 76px;
+    font-size: 420%;
+    float: none;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: Minecraft;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+#title:hover {
+    -ms-transform: skew(-170deg);
+    -webkit-transform: skew(-170deg);
+    transform: skew(-170deg);
+}
+
+#about{
+    font-family: "Titillium Web";
+    font-size: 14px;
+    text-align:right;
+    float: right;
+}
+
+#home{
+    font-family: "Titillium Web";
+    font-size: 14px;
+    text-align:right;
+    float: right;
+}
+
+#map_canvas{
+    margin-left: 8%;
+    margin-top: 2%;
+    border: 5px solid;
+    border-color: cadetblue;
+}
+
+#queryL {
+	float: left;
+	z-index: 99;
+	position: fixed;
+	top: 260px;
+	width: 250px;
+	height: 700px;
+	left: -225px;
+	border: 3px solid;
+    border-radius: 5px;
+	background-color: skyblue;
+	-webkit-border-color: dodgerblue;
+	-moz-border-color: dodgerblue;
+	-o-border-color: dodgerblue;
+	border-color: dodgerblue dodgerblue dodgerblue transparent;
+	border-width: 5px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-transition: left 1s; /* Safari */
+	-moz-transition: left 1s; /* Firefox */
+	-o-transition: left 1s; /* Opera */
+    transition: left 1s;
+    font-family: Titillium Web;
+}
+
+#queryL:hover {
+	left: -10px;
+}
+
+#pulloutL {
+	float: right;
+	vertical-align: middle;
+	margin-top: 325px;
+}
+
+#queryL p {
+	position: relative;
+	left: 60px;
+}
+
+#queryL #containerL{
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top:-45px;
+    padding-left:15px;
+    left: 80px;
+}
+
+#queryL #contentL{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -25px;
+    padding-right:50px;
+    overflow: auto;
+}
+
+#queryR {
+	float: right;
+	z-index: 99;
+	position: fixed;
+	top: 260px;
+	width: 250px;
+	height: 700px;
+	right: -225px;
+	border: 3px solid;
+    border-radius: 5px;
+	background-color: skyblue;
+	-webkit-border-color: dodgerblue;
+	-moz-border-color: dodgerblue;
+	-o-border-color: dodgerblue;
+	border-color: dodgerblue dodgerblue dodgerblue dodgerblue;
+	border-width: 5px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-transition: right 1s; /* Safari */
+	-moz-transition: right 1s; /* Firefox */
+	-o-transition: right 1s; /* Opera */
+    transition: right 1s;
+    font-family: Titillium Web;
+}
+
+#queryR:hover {
+	right: -10px;
+}
+
+#pulloutR {
+	Float: left;
+	vertical-align: middle;
+	margin-top: 325px;
+    -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+#queryR p {
+	position: relative;
+	left: 60px;
+}
+
+#queryR #containerR{
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top:-45px;
+    padding-left:15px;
+    left: 80px;
+}
+
+#queryR #contentR {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 45px;
+}
+
+#header {
+    font-family: Minecraft;
+}
+
+#para{
+    font-family: Titillium Web;
+    font-size: 20px;
+}

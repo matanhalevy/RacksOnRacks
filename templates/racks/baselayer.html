@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static "css/racks.css" %}"  />
+    <title>{% block title %} RacksOnRacks {% endblock %}</title>
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+
+    {% block script_block %}
+    {%  endblock %}
+
+</head>
+
+<div id="menu">
+    <div id="logo"  onclick="rerun()" style="cursor:pointer;">
+        <img id="logo" src="{% static "images/logo.png" %}"/>
+    </div>
+    <div id="title" onclick="rerun()" style="cursor:pointer;">
+        | RACKS ON RACKS |
+    </div>
+
+
+</div>
+
+
+
+{% block body_block %}{% endblock %}
+
+</html>
